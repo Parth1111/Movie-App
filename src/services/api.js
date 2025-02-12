@@ -1,12 +1,10 @@
-const API_KEY = `secret`;
-
 
 const options = {
   method: "GET",
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer secret",
+      `Bearer ${import.meta.env.VITE_API_KEY}`,
   },
 };
 
@@ -35,7 +33,7 @@ export const getCategoricalMovies = async (category) => {
 
 export const searchMovie = async (query) => {
   const response = await fetch(
-    `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(
+    `${BASE_URL}/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${encodeURIComponent(
       query
     )}`
   );
