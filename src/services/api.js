@@ -1,4 +1,4 @@
-const API_KEY = `eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MzI1ZWIyOWFkOWM4YTgwYzg3NjEzNGNhZjU5MzQwNCIsIm5iZiI6MTczOTI5MjE0Ni4zNjUsInN1YiI6IjY3YWI3ZGYyZjcxYTM3ODNlMWJiMmNiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RiZgOljX8tzck0iJhc8YKe4RT1kriX18xmZeuSkHntA`;
+const API_KEY = `secret`;
 
 
 const options = {
@@ -6,7 +6,7 @@ const options = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MzI1ZWIyOWFkOWM4YTgwYzg3NjEzNGNhZjU5MzQwNCIsIm5iZiI6MTczOTI5MjE0Ni4zNjUsInN1YiI6IjY3YWI3ZGYyZjcxYTM3ODNlMWJiMmNiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RiZgOljX8tzck0iJhc8YKe4RT1kriX18xmZeuSkHntA",
+      "Bearer secret",
   },
 };
 
