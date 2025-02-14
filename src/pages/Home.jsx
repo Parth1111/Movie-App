@@ -11,7 +11,13 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [pageNumber, setPageNumber] = useState(1);
   const [category, setCategory] = useState("now_playing");
-  const categories = ["Now Playing", "Popular", "Top Rated", "Upcoming"];
+  const categories = [
+    { id: 'now_playing', text: 'Now Playing' },
+    { id: 'popular', text: 'Popular' },
+    { id: 'top_rated', text: 'Top Rated' },
+    { id: 'upcoming', text: 'Upcoming' }
+  ]
+
 
   useEffect(() => {
     const loadPopularMovies = async () => {
@@ -66,6 +72,10 @@ function Home() {
     }
   };
 
+  const handleClick = () => {
+    console.log("Clicked!");
+  }
+
   return (
     <div className="home">
       <form onSubmit={handleSearch} className="search-form">
@@ -83,16 +93,11 @@ function Home() {
 
       {error && <div className="error-message">{error}</div>}
 
-      {/* <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex' }}>
         {categories.map((category) =>
-          <CategoriesBar category={category} />
+          <CategoriesBar key={category.id} category={category.text} onCategoryClick={() => { setCategory(category.id) }} />
         )}
-      </div> */}
-      <button onClick={() => { setCategory('now_playing') }}>Now Playing</button>
-      <button onClick={() => { setCategory('popular') }}>Popular</button>
-      <button onClick={() => { setCategory('top_rated') }}>Top Rated</button>
-      <button onClick={() => { setCategory('upcoming') }}>Upcoming</button>
-
+      </div>
 
       {loading ? (
         <div className="loading">Loading...</div>
