@@ -1,3 +1,4 @@
 1. Adding Pagination
 2. Making CategoriesBar Modular - done
 3. Fixing MovieCard component so it does not occupy entire page when only one card is present in Favorites Page
+4. Making CategoriesBar Buttons a group component where when clicked on a button ,it gets highlighted (like dio button group)
