@@ -1,11 +1,6 @@
 import "../css/CategoriesBar.css";
 
-function CategoriesBar({ category }) {
-
-  function onCategoryClick() {
-
-  }
-
+function CategoriesBar({ category, onCategoryClick }) {
   return (
     <div className='category-bar'>
       <button onClick={onCategoryClick}>{category}</button>
